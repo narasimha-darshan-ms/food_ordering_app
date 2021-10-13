@@ -1,11 +1,15 @@
 import './App.css';
-import Header from './Layout/Header/Header';
+import Header from './Components/Layout/Header/Header';
 import {Fragment} from 'react'
+import MealList from './Components/Meals/MealsList/MealList';
 
 function App() {
   return (
     <Fragment>
       <Header />
+      <main>
+        <MealList />
+      </main>
     </Fragment>
 	
   );
