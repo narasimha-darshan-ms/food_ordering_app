@@ -1,10 +1,11 @@
 import React from 'react'
 import classes from './HeaderCartButton.module.css'
 import CartIcon from './CartIcon.js'
-import { useDispatch }  from 'react-redux';
+import { useDispatch, useSelector }  from 'react-redux';
 
 export default function HeaderCartButton(props) {
     const dispatch = useDispatch()
+    const numberOfItemsInCart = useSelector(state => state.numberOfItemsInCart)
     
     const cartClickHandler = () => {    dispatch({type: 'onClickCartButton'})   }
 
@@ -12,7 +13,7 @@ export default function HeaderCartButton(props) {
         <button className={classes.button} onClick={cartClickHandler}>
             <span className={classes.icon}>     <CartIcon />    </span>
             <span>  Cart    </span>
-            <span className={classes.badge}>    {0}     </span>
+            <span className={classes.badge}>    {numberOfItemsInCart}     </span>
         </button>
     )
 }

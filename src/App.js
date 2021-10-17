@@ -7,8 +7,6 @@ import { Fragment } from 'react';
 
 function App() {
   const cartIsShown = useSelector(state => state.cartIsShown)
-  debugger;
-  console.log(cartIsShown)
 
   return (
     <Fragment>

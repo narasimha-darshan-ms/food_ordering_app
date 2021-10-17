@@ -8,13 +8,13 @@ const DUMMY_MEALS = [
       id: 'm1',
       name: 'idli',
       description: 'A South Indian dish',
-      price: 22.99,
+      price: 25,
     },
     {
-      id: 'm1',
-      name: 'idli',
-      description: 'A South Indian dish',
-      price: 22.99,
+      id: 'm2',
+      name: 'dosa',
+      description: 'Another South Indian dish',
+      price: 30,
     }
   ];
 
@@ -22,11 +22,11 @@ export default function AvailableMeals() {
   const mealsList = DUMMY_MEALS.map(meal => 
     <MealItem 
       key={meal.id} 
+      id={meal.id}
       name={meal.name} 
       description={meal.description} 
       price={meal.price}
     />)
-
   return (
     <section className={classes.meals}>
       <Card>
