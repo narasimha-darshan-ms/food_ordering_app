@@ -18,3 +18,10 @@
     background-color: #641e03;
     border-color: #641e03;
   }
+
+  .error{
+    color: #e90a0a !important;
+    background-color: rgb(241, 232, 215);
+    border-radius: .7em;
+    padding: .2em;
+  }
